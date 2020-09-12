@@ -1,0 +1,26 @@
+
+<h3>If you have liked our website, please kindly post your feedback. Constructive criticism on how to improve our site will be appreciated.</h3>
+
+<button mat-raised-button color="primary" class="feedback" (click)="userFeedbackAction();formOpened()">Post Comments</button>
+
+<div *ngIf="feedbackFormOpened" class="feedback">
+
+    <h3>Leave a Feedback</h3>
+    <form  method="post" id="commentform">
+
+      <label for="feedback_author" class="required">Your name</label>
+      <input type="text" name="comment_author" id="feedback_author" value="" tabindex="1" required="required">
+  
+      <label for="email" class="required">Your email;</label>
+      <input type="email" name="email" id="email" value="" tabindex="2" required="required">
+  
+      <label for="feedback" class="required">Your message</label>
+      <textarea name="comment" id="comment" rows="10" tabindex="4"  required="required"></textarea>
+  
+      <input type="hidden" name="comment_post_ID" value="1" id="comment_post_ID" />
+      <!-- <input name="submit" type="submit" value="Post Feedback" /> -->
+  
+    </form>
+    <button mat-raised-button color="accent" (click)="userFeedbackAction()">Post</button>
+  </div>
+  <h2>Previous users' comments...</h2>

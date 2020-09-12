@@ -1,0 +1,30 @@
+/*
+@import '~@angular/material/theming';
+// Create a config with the default typography levels.
+$config: mat-typography-config();
+
+// Custom header that uses only the Material `font-size` and `font-family`.
+.unicorn-header {
+  font-size: mat-font-size($config, headline);
+  font-family: mat-font-family($config);
+}
+
+// Custom title that uses all of the typography styles from the `title` level.
+.unicorn-title {
+  @include mat-typography-level-to-styles($config, title);
+}
+
+// Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
+@include mat-base-typography($custom-typography);
+
+// Override typography for a specific Angular Material components.
+@include mat-checkbox-typography($custom-typography);
+
+// Override typography for all Angular Material, including mat-base-typography and all components.
+@include angular-material-typography($custom-typography); */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5 { font-weight: 700;}

@@ -1,0 +1,42 @@
+﻿@model List<BookStoreApp.DAL.Book>
+
+@{
+    ViewData["Title"] = "Books";
+}
+
+<h1>Books in Stock</h1>
+
+<p>
+    <a asp-action="Create" asp-controller="Home">Create New Book</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+            Book  ID
+            </th>
+            <th>
+            Book Name
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(int i=0; i<Model.Count(); i++)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => Model[i].Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model[i].Name)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@Model[i].Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@Model[i].Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@Model[i].Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
