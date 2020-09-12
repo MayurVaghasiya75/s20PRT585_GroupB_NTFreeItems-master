@@ -7,6 +7,7 @@ namespace NTFreeItemsPRT585GroupB2020.Model
 {
     public class BooksBLLmodel
     {
-        public string Books { get; set; }
+        public int Bookid { get; set; }
+        public string Book { get; set; }
     }
 }
